@@ -1,1 +1,1 @@
-BEda tiery kiedys
+SupernovaTierlist oficjalna strona internetowa
