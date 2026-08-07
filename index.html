@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supernova TierList</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0b0f;
+            color: white;
+        }
+
+        header {
+            padding: 25px;
+            text-align: center;
+            background: #111118;
+            border-bottom: 1px solid #292933;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            color: #999;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .search {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            background: #15151c;
+            color: white;
+            font-size: 16px;
+            outline: none;
+            margin-bottom: 25px;
+        }
+
+        .tier {
+            display: flex;
+            min-height: 80px;
+            margin-bottom: 8px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #15151c;
+        }
+
+        .tier-name {
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .players {
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .player {
+            padding: 10px 15px;
+            background: #24242d;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .lt1 { background: #ff3333; }
+        .lt2 { background: #ff6633; }
+        .lt3 { background: #ff9933; }
+        .lt4 { background: #e6b800; }
+        .lt5 { background: #777777; }
+
+        .card {
+            margin-top: 35px;
+            padding: 25px;
+            background: #111118;
+            border: 1px solid #292933;
+            border-radius: 12px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚡ Supernova TierList</h1>
+    <p>Minecraft PvP Rankings</p>
+</header>
+
+<div class="container">
+
+    <input
+        class="search"
+        type="text"
+        id="search"
+        placeholder="🔎 Wyszukaj gracza..."
+        onkeyup="searchPlayer()"
+    >
+
+    <div class="tier">
+        <div class="tier-name lt1">LT1</div>
+        <div class="players">
+            <div class="player">PlayerOne</div>
+        </div>
+    </div>
+
+    <div class="tier">
+        <div class="tier-name lt2">LT2</div>
+        <div class="players">
+            <div class="player">PlayerTwo</div>
+        </div>
+    </div>
+
+    <div class="tier">
+        <div class="tier-name lt3">LT3</div>
+        <div class="players">
+            <div class="player">PlayerThree</div>
+        </div>
+    </div>
+
+    <div class="tier">
+        <div class="tier-name lt4">LT4</div>
+        <div class="players">
+            <div class="player">PlayerFour</div>
+        </div>
+    </div>
+
+    <div class="tier">
+        <div class="tier-name lt5">LT5</div>
+        <div class="players">
+            <div class="player">D4non_</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🏆 Ranking</h2>
+        <p>Lista najlepszych graczy Minecraft PvP.</p>
+    </div>
+
+</div>
+
+<script>
+function searchPlayer() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let players = document.getElementsByClassName("player");
+
+    for (let player of players) {
+        let name = player.innerText.toLowerCase();
+
+        if (name.includes(input)) {
+            player.style.display = "block";
+        } else {
+            player.style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
