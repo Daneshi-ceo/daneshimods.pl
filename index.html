@@ -1,32 +1,120 @@
+```html
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supernova TierList</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<body>
+<title>Daneshi Downloads</title>
 
-    <h1>🌟 Supernova TierList</h1>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <h2>🏆 Tier List</h2>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #08090d;
+    color: #fff;
+}
 
-    <p>
-        Witaj na stronie Supernova TierList!
-    </p>
+/* ===== NAVBAR ===== */
 
-    <h2>📜 Regulamin</h2>
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(8, 9, 13, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #242630;
+}
 
-    <p>
-        Tutaj znajdziecie regulamin tier listy.
-    </p>
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
 
-    <h2>❓ Informacje</h2>
+.logo {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
 
-    <p>
-        Więcej informacji już wkrótce.
-    </p>
+.logo span {
+    color: #9b7cff;
+}
 
-</body>
-</html>
+.nav-links {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links button {
+    background: transparent;
+    border: 1px solid transparent;
+    color: #a7aab4;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: .2s;
+}
+
+.nav-links button:hover,
+.nav-links button.active {
+    color: white;
+    background: #15171e;
+    border-color: #2b2e38;
+}
+
+/* ===== MAIN ===== */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 65px 25px;
+}
+
+.section {
+    display: none;
+    animation: fade .25s ease;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== START ===== */
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 85px);
+    line-height: .95;
+    font-weight: 900;
+    letter-spacing
