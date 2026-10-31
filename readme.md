@@ -1,1 +1,1 @@
-SupernovaTierlist oficjalna strona internetowa
+Daneshimods oficjalna strona internetowa
