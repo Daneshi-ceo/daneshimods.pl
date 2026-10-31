@@ -1,1 +1,1 @@
-Daneshimods oficjalna strona internetowa
+Daneshi-mods oficjalna strona internetowa
