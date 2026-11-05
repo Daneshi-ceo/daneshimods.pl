@@ -264,7 +264,6 @@ footer {
 }
 
 @media (max-width: 700px) {
-
     nav {
         flex-direction: column;
     }
@@ -324,7 +323,6 @@ footer {
 </button>
 
 </div>
-
 </nav>
 </header>
 
@@ -352,7 +350,6 @@ onclick="showSection('mods'); return false;">
 </a>
 
 </div>
-
 </section>
 
 
@@ -367,6 +364,8 @@ onclick="showSection('mods'); return false;">
 </p>
 
 <div class="grid">
+
+<!-- 01 -->
 
 <div class="card">
 
@@ -391,8 +390,33 @@ rel="noopener">
 
 </div>
 
+
+<!-- 02 -->
+
+<div class="card">
+
+<div class="card-number">02 / MOD</div>
+
+<h3>Mody 1.21.11 v2</h3>
+
+<p>
+    Zaktualizowana paczka modyfikacji
+    do Minecraft 1.21.11.
+</p>
+
+<span class="tag">ZIP · 1.21.11</span>
+
+<a
+class="download"
+href="https://www.mediafire.com/file/tk5m38vfvfif8x3/mody_1.21.11_v2.zip/file"
+target="_blank"
+rel="noopener">
+    POBIERZ
+</a>
+
 </div>
 
+</div>
 </section>
 
 
@@ -407,7 +431,6 @@ rel="noopener">
 </p>
 
 <div class="grid">
-
 
 <!-- 01 -->
 
@@ -468,7 +491,7 @@ rel="noopener">
 <h3>Coldified 200k</h3>
 
 <p>
-     Texturepack gracza będącego top 3 świata.
+    Texturepack gracza będącego top 3 świata.
 </p>
 
 <span class="tag">MEDIAFIRE</span>
@@ -558,9 +581,7 @@ rel="noopener">
 
 </div>
 
-
 </div>
-
 </section>
 
 
@@ -575,7 +596,6 @@ rel="noopener">
 </p>
 
 <div class="grid">
-
 
 <!-- 01 -->
 
@@ -644,7 +664,7 @@ rel="noopener">
 
 <a
 class="download"
-href="https://www.mediafire.com/file/exbt84vipvjvmvl/No_More_Bobber.zip/file"
+href="https://www.mediafire.com/folder/jl24uca7vemcd/No+More+Bobber"
 target="_blank"
 rel="noopener">
     POBIERZ
@@ -662,14 +682,14 @@ rel="noopener">
 <h3>Duże Perły</h3>
 
 <p>
-    Overlay zwiększający widoczność pereł w Minecraft PvP.
+    Overlay zmieniający wygląd pereł Endu.
 </p>
 
 <span class="tag">MEDIAFIRE</span>
 
 <a
 class="download"
-href="https://www.mediafire.com/file/fafipkf0d03mge0/duze_perly_1.zip/file"
+href="https://www.mediafire.com/folder/0a7f3bqg2rvjg/duże+perły"
 target="_blank"
 rel="noopener">
     POBIERZ
@@ -678,8 +698,31 @@ rel="noopener">
 </div>
 
 
+<!-- 05 -->
+
+<div class="card">
+
+<div class="card-number">05 / OVERLAY</div>
+
+<h3>Low Shield</h3>
+
+<p>
+    Overlay zmniejszający tarczę widoczną podczas trzymania jej w ręce.
+</p>
+
+<span class="tag">ZIP</span>
+
+<a
+class="download"
+href="https://www.mediafire.com/file/kzifhrqiyf95e9y/Low_Shield.zip/file"
+target="_blank"
+rel="noopener">
+    POBIERZ
+</a>
+
 </div>
 
+</div>
 </section>
 
 
@@ -690,30 +733,29 @@ rel="noopener">
 <h2 class="page-title">Informacje</h2>
 
 <p class="page-description">
-    Informacje o stronie i plikach.
+    Kilka informacji o stronie Daneshi Mods.
 </p>
 
 <div class="info">
 
-<p>
-<strong>Daneshi Mods</strong> to strona z
-modyfikacjami, texturepackami i overlayami
-do Minecraft.
-</p>
+<strong>DANESHI MODS</strong><br>
 
-<br>
+Strona zawiera modyfikacje, texturepacki oraz overlaye
+przydatne podczas gry w Minecraft PvP.
 
-<p>
-Przyciski <strong>POBIERZ</strong> kierują do
-danego pliku lub strony pobierania.
-</p>
+<br><br>
 
-<br>
+<strong>Pobieranie:</strong><br>
 
-<p>
-Pliki mogą być hostowane między innymi na
-MediaFire, CurseForge oraz PacksMC.
-</p>
+Kliknij przycisk POBIERZ przy wybranym elemencie.
+Zostaniesz przekierowany na stronę pobierania.
+
+<br><br>
+
+<strong>Aktualizacje:</strong><br>
+
+Lista plików może być aktualizowana wraz z dodawaniem
+nowych modyfikacji i paczek.
 
 </div>
 
@@ -723,7 +765,7 @@ MediaFire, CurseForge oraz PacksMC.
 
 
 <footer>
-© 2026 Daneshi Mods
+    DANESHI MODS © 2026
 </footer>
 
 
@@ -731,23 +773,31 @@ MediaFire, CurseForge oraz PacksMC.
 
 function showSection(sectionId, button) {
 
-    document.querySelectorAll(".section").forEach(section => {
-        section.classList.remove("active");
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
     });
 
-    document.getElementById(sectionId).classList.add("active");
+    document.getElementById(sectionId).classList.add('active');
 
-    document.querySelectorAll(".nav-links button").forEach(btn => {
-        btn.classList.remove("active");
+    document.querySelectorAll('.nav-links button').forEach(btn => {
+        btn.classList.remove('active');
     });
 
     if (button) {
-        button.classList.add("active");
+        button.classList.add('active');
+    } else {
+        const buttons = document.querySelectorAll('.nav-links button');
+
+        buttons.forEach(btn => {
+            if (btn.getAttribute('onclick')?.includes("'" + sectionId + "'")) {
+                btn.classList.add('active');
+            }
+        });
     }
 
     window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: 'smooth'
     });
 }
 
